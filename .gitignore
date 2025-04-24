@@ -1,0 +1,57 @@
+# 언리얼 엔진 자동 생성 파일
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# 플러그인 관련 캐시 및 임시 파일
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+Plugins/*/Saved/
+Plugins/*/.vs/
+Plugins/*/DerivedDataCache/
+
+# 패키징 결과물
+Builds/
+
+# 에셋 컴파일 캐시
+.vscode/
+*.code-workspace
+
+# 언리얼 엔진 임시 생성 파일
+*.uasset.backup
+*.umap.backup
+*.upk
+*.udk
+
+# IDE 설정 파일
+.idea/
+*.swp
+*.swo
+
+# 운영체제 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 컨텐츠에서 소스 관리 제외할 특정 폴더
+Content/StarterContent/
+Content/Collections/
+Content/Developers/
+
+# 대용량 미디어 파일
+*.mp4
+*.mov
+*.psd
+
+# 추가 파일
+Config/DefaultEditorPerProjectUserSettings.ini
+
