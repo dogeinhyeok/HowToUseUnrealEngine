@@ -56,14 +56,22 @@ Workloads 아래 Game development with C++ 와 다음 옵션을 선택합니다.
 2. 실행 및 디버그 드롭다운에서 `Launch HowToUseUnrealEngine (Development)`를 선택합니다
 3. 실행 버튼을 클릭합니다
 
+#### Cursor에서 프로젝트 실행하기
+
+1. Cursor에서는 라이센스 문제로 언리얼 엔진을 직접 실행할 수 없습니다.
+2. 대신 Cursor를 사용하여 소스 코드를 편집하고 저장한 후, VSCode를 백그라운드에서 실행하여 개발 환경을 유지할 수 있습니다.
+3. 코드 변경 후에는 언리얼 엔진 에디터로 돌아가 컴파일 버튼(⟳)을 클릭하여 변경사항을 적용하고 실행할 수 있습니다.
+
 ### 코드 수정 및 실행하기
 
 1. 언리얼 엔진 에디터에서 `Edit > Editor Preferences > Live Coding > Enable Live Coding`을 비활성화합니다.
-2. Visual Studio 또는 VSCode에서 코드를 수정하고 저장합니다 (Ctrl+S).
-3. 코드 컴파일 방법:
+2. Visual Studio 또는 VSCode(또는 Cursor)에서 코드를 수정하고 저장합니다 (Ctrl+S).
+3. 코드를 컴파일합니다:
+
+   - **언리얼 에디터**: 에디터 내에서 `컴파일` 버튼(⟳) 클릭
    - **Visual Studio**: 솔루션 빌드(F7) 또는 `빌드 > 솔루션 빌드` 메뉴 선택
    - **VSCode**: 명령 팔레트(Ctrl+Shift+P)에서 `Tasks: Run Build Task` 실행
-   - **언리얼 에디터**: 에디터 내에서 `컴파일` 버튼(⟳) 클릭
+
 4. 언리얼 에디터에서 `Play` 버튼을 클릭하여 레벨을 실행하고 변경 사항을 테스트합니다.
 
 ## 개발 환경
