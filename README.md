@@ -6,36 +6,71 @@
 
 이 프로젝트는 언리얼 엔진의 다양한 기능과 사용법을 체계적으로 학습할 수 있도록 구성되었습니다. 초보자부터 중급자까지 단계별로 학습할 수 있는 레벨 기반 구조를 채택했습니다.
 
-## 시작하기
-
-1. 프로젝트 클론하기
+### 프로젝트 클론하기
 
 ```
 git clone https://github.com/dogeinhyeok/HowToUseUnrealEngine.git
 ```
 
-2. Visual Studio 프로젝트 생성하기
+### Visual Studio로 개발하기
 
-   - 프로젝트 폴더에서 HowToUseUnrealEngine.uproject 파일을 마우스 오른쪽 버튼으로 클릭합니다
-   - "Generate Visual Studio project files" 메뉴를 선택합니다
-   - 새로 생성된 HowToUseUnrealEngine.sln 솔루션 파일을 엽니다
+#### 필수 확장 프로그램 설치하기
 
-3. Visual Studio 2022에서 프로젝트 설정
+Workloads 아래 Game development with C++ 와 다음 옵션을 선택합니다.
 
-   - 솔루션 구성을 'Development Editor'로 설정합니다
-   - 솔루션 플랫폼을 'Win64'로 설정합니다
-   - 솔루션 탐색기에서 HowToUseUnrealEngine 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 '디버그 > 새 인스턴스 시작'을 선택합니다
+- .NET desktop development
+- Desktop development with C++
+- Universal Windows Platform development
+- Game development with C++
+  - Unreal Engine installer
 
-4. Source 폴더 탐색하며 학습하기
+#### Visual Studio 프로젝트 생성하기
 
-   - Source/HowToUseUnrealEngine 폴더에서 C++ 코드 구조를 확인합니다
-   - 프로젝트 구성 방식과 모듈 구조를 이해합니다
-   - 각 Target.cs 파일을 통해 빌드 설정을 학습합니다
+1. 프로젝트 폴더에서 `HowToUseUnrealEngine.uproject` 파일을 마우스 오른쪽 버튼으로 클릭합니다
+2. `Generate Visual Studio project files` 메뉴를 선택합니다
+3. 새로 생성된 `HowToUseUnrealEngine.sln` 솔루션 파일을 엽니다
+
+#### Visual Studio에서 프로젝트 실행하기
+
+1. 솔루션 구성을 `Development Editor`로 설정합니다
+2. 솔루션 플랫폼을 `Win64`로 설정합니다
+3. 솔루션 탐색기에서 HowToUseUnrealEngine 프로젝트를 마우스 오른쪽 버튼으로 클릭하고 `디버그 > 새 인스턴스 시작`을 선택합니다
+
+### VSCode로 개발하기
+
+#### 필수 확장 프로그램 설치하기
+
+- [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
+- [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
+- [.NET SDK](https://dotnet.microsoft.com/ko-kr/download)
+
+#### Visual Studio Code 프로젝트 생성하기
+
+1. 프로젝트 폴더에서 `HowToUseUnrealEngine.uproject` 파일을 마우스 오른쪽 버튼으로 클릭합니다
+2. `Generate Visual Studio Code project files` 메뉴를 선택합니다 (없을 경우 언리얼 에디터 환경설정에서 기본 소스 코드 에디터를 VSCode로 변경하세요)
+3. VSCode에서 `File > Open Folder`를 선택하고 HowToUseUnrealEngine 프로젝트 폴더를 엽니다
+
+#### Visual Studio Code에서 프로젝트 실행하기
+
+1. VSCode에서 실행 및 디버그 탭을 클릭합니다 (Ctrl+Shift+D)
+2. 실행 및 디버그 드롭다운에서 `Launch HowToUseUnrealEngine (Development)`를 선택합니다
+3. 실행 버튼을 클릭합니다
+
+### 코드 수정 및 실행하기
+
+1. 언리얼 엔진 에디터에서 `Edit > Editor Preferences > Live Coding > Enable Live Coding`을 비활성화합니다.
+2. Visual Studio 또는 VSCode에서 코드를 수정하고 저장합니다 (Ctrl+S).
+3. 코드 컴파일 방법:
+   - **Visual Studio**: 솔루션 빌드(F7) 또는 `빌드 > 솔루션 빌드` 메뉴 선택
+   - **VSCode**: 명령 팔레트(Ctrl+Shift+P)에서 `Tasks: Run Build Task` 실행
+   - **언리얼 에디터**: 에디터 내에서 `컴파일` 버튼(⟳) 클릭
+4. 언리얼 에디터에서 `Play` 버튼을 클릭하여 레벨을 실행하고 변경 사항을 테스트합니다.
 
 ## 개발 환경
 
 - 언리얼 엔진 5.5
 - Visual Studio 2022
+- Visual Studio Code
 - Windows 10/11
 
 ## 프로젝트 구조
@@ -46,7 +81,7 @@ git clone https://github.com/dogeinhyeok/HowToUseUnrealEngine.git
 
 ## 문서화 규칙
 
-자세한 코드 주석 및 문서화 규칙은 .cursor/rules/ 폴더를 참조해주세요.
+자세한 코드 주석 및 문서화 규칙은 `.cursor/rules/` 폴더를 참조해주세요.
 
 ## 기여하기
 
