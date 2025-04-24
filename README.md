@@ -55,7 +55,3 @@ git clone https://github.com/dogeinhyeok/HowToUseUnrealEngine.git
 3. 변경사항을 커밋합니다.
 4. 브랜치에 푸시합니다.
 5. Pull Request를 제출합니다.
-
-## 라이센스
-
-이 프로젝트는 MIT 라이센스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요.
