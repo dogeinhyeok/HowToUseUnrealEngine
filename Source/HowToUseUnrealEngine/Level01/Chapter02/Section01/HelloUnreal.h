@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -13,10 +11,6 @@ class HOWTOUSEUNREALENGINE_API UHelloUnreal : public USceneComponent
 	GENERATED_BODY()
 
 public:	
-	// Sets default values for this component's properties
-	UHelloUnreal();
-
-	// "HelloUnreal"을 출력하는 함수
 	UFUNCTION(BlueprintCallable, Category = "Level01|Chapter02|Section01")
 	void Print();
 }; 

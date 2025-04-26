@@ -1,20 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "HelloUnreal.h"
 
-// 문자열 상수 정의
-const FString MESSAGE_TEXT = TEXT("Hello Unreal");
-
-// Sets default values for this component's properties
-UHelloUnreal::UHelloUnreal()
-{
-	PrimaryComponentTick.bCanEverTick = true;
-}
-
-// "HelloUnreal"을 출력하는 함수
 void UHelloUnreal::Print()
 {
+	const FString MESSAGE_TEXT = TEXT("Hello Unreal");
+
 	// 로그에 출력
 	UE_LOG(LogTemp, Log, TEXT("%s"), *MESSAGE_TEXT);
 	

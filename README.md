@@ -70,15 +70,20 @@ Workloads 아래 Game development with C++ 와 다음 옵션을 선택합니다.
 
    - **언리얼 에디터**: 에디터 내에서 `컴파일` 버튼(⟳) 클릭
    - **Visual Studio**: 솔루션 빌드(F7) 또는 `빌드 > 솔루션 빌드` 메뉴 선택
-   - **VSCode**: 명령 팔레트(Ctrl+Shift+P)에서 `Tasks: Run Build Task` 실행
+   - **Visual Studio Code**: 명령 팔레트(Ctrl+Shift+P)에서 `Tasks: Run Build Task` 실행
 
-4. 언리얼 에디터에서 `Play` 버튼을 클릭하여 레벨을 실행하고 변경 사항을 테스트합니다.
+4. 코드 인텔리센스가 제대로 적용되도록 프로젝트를 새로고침합니다:
+
+   - **Visual Studio**: 언리얼 에디터에서 `Tools > Refresh Visual Studio Project` 클릭
+   - **Visual Studio Code**: 언리얼 에디터에서 `Tools > Refresh Visual Studio Code Project` 클릭
+
+5. 언리얼 에디터에서 `Play` 버튼을 클릭하여 레벨을 실행하고 변경 사항을 테스트합니다.
 
 ## 개발 환경
 
 - 언리얼 엔진 5.5
 - Visual Studio 2022
-- Visual Studio Code
+- Visual Studio Code(+ Cursor)
 - Windows 10/11
 
 ## 프로젝트 구조
