@@ -4,18 +4,16 @@
 #include "HelloUnreal.h"
 
 // 문자열 상수 정의
-const FString MESSAGE_TEXT = TEXT("HelloUnreal");
+const FString MESSAGE_TEXT = TEXT("Hello Unreal");
 
-// Sets default values
-AHelloUnreal::AHelloUnreal()
+// Sets default values for this component's properties
+UHelloUnreal::UHelloUnreal()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
+	PrimaryComponentTick.bCanEverTick = true;
 }
 
 // "HelloUnreal"을 출력하는 함수
-void AHelloUnreal::PrintHello()
+void UHelloUnreal::Print()
 {
 	// 로그에 출력
 	UE_LOG(LogTemp, Log, TEXT("%s"), *MESSAGE_TEXT);
@@ -26,4 +24,3 @@ void AHelloUnreal::PrintHello()
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, *MESSAGE_TEXT);
 	}
 }
-
