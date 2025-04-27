@@ -3,7 +3,7 @@
 UObjectReflection::UObjectReflection()
 {
     // 생성자에서 변수를 초기화하면 해당 값이 CDO(Class Default Object)에 저장됩니다.
-    SchoolName = TEXT("Real School");
+    Value = TEXT("Default Value");
 }
 
 void UObjectReflection::Print()
@@ -20,8 +20,8 @@ void UObjectReflection::Print()
     UE_LOG(LogTemp, Log, TEXT("ClassCompileTime: %s"), *ClassCompileTime->GetName());
 
     // CDO(Class Default Object)는 여전히 생성자에서 설정한 "Real School" 값을 유지합니다.
-    UE_LOG(LogTemp, Log, TEXT("SchoolName: %s"), *SchoolName);
-    SchoolName = TEXT("Unreal School");
-    UE_LOG(LogTemp, Log, TEXT("SchoolName: %s"), *SchoolName);
-    UE_LOG(LogTemp, Log, TEXT("SchoolName: %s"), *GetClass()->GetDefaultObject<UObjectReflection>()->SchoolName);
+    UE_LOG(LogTemp, Log, TEXT("Value: %s"), *Value);
+    Value = TEXT("Modified Value");
+    UE_LOG(LogTemp, Log, TEXT("Value: %s"), *Value);
+    UE_LOG(LogTemp, Log, TEXT("Value: %s"), *GetClass()->GetDefaultObject<UObjectReflection>()->Value);
 }

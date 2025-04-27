@@ -2,21 +2,21 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "ObjectReflection.generated.h"
+#include "School.generated.h"
 
 
 UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API UObjectReflection : public USceneComponent
+class HOWTOUSEUNREALENGINE_API USchool : public USceneComponent
 {
 	GENERATED_BODY()
 
 public:
-	UObjectReflection();
+	USchool();
 	
-	UFUNCTION(BlueprintCallable, Category = "Level01|Chapter02|Section04")
+	UFUNCTION(BlueprintCallable, Category = "Level01|Chapter02|Section05")
 	void Print();
 
 private:
 	UPROPERTY(EditAnywhere)
-	FString Value;
+	FString SchoolName;
 };

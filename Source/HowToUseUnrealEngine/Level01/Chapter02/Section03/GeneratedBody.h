@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "GeneratedBody.generated.h"
+#include "GeneratedBody.generated.h"  // 이 헤더 파일이 가장 하단에 위치해야 합니다.
 
 
 UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
