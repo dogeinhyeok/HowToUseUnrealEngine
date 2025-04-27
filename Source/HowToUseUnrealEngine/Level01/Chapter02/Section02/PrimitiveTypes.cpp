@@ -1,5 +1,6 @@
 #include "PrimitiveTypes.h"
 
+
 void UPrimitiveTypes::Print()
 {
 	// 기본 숫자 타입 선언
