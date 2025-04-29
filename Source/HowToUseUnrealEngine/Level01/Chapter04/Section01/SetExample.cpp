@@ -1,11 +1,11 @@
-#include "Set.h"
+#include "SetExample.h"
 
 static FString IntToString(const int32& Value)
 {
 	return FString::FromInt(Value);
 }
 
-void USet::Print()
+void USetExample::Print()
 {
 	TSet<int32> Int32Set;
 

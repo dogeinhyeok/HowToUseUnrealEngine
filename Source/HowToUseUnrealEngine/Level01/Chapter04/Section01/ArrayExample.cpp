@@ -1,11 +1,11 @@
-#include "Array.h"
+#include "ArrayExample.h"
 
 static FString IntToString(const int32& Value)
 {
 	return FString::FromInt(Value);
 }
 
-void UArray::Print()
+void UArrayExample::Print()
 {
 	const int32 ArrayNum = 10;
 	TArray<int32> Int32Array;

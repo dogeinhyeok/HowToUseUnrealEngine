@@ -2,11 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Set.generated.h"
+#include "ArrayExample.generated.h"
 
 
 UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API USet : public USceneComponent
+class HOWTOUSEUNREALENGINE_API UArrayExample : public USceneComponent
 {
 	GENERATED_BODY()
 
