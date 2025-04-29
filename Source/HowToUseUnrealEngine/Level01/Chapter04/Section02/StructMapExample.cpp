@@ -1,5 +1,6 @@
 #include "StructMapExample.h"
 
+
 FString MakeRandomName()
 {
     TCHAR FirstChar[] = TEXT("김이박최");
