@@ -17,7 +17,7 @@ FString MakeRandomName()
     return RandomArray.GetData();
 }
 
-void UStructMapExample::Print()
+void UStructMapExample::Init()
 {
 	const int32 StudentNum = 300;
 

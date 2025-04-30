@@ -1,16 +1,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Engine/GameInstance.h"
 #include "SetExample.generated.h"
 
 
-UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API USetExample : public USceneComponent
+UCLASS( ClassGroup=(HowToUseUnrealEngine) )
+class HOWTOUSEUNREALENGINE_API USetExample : public UGameInstance
 {
 	GENERATED_BODY()
 
 public:	
-	UFUNCTION(BlueprintCallable, Category = "Level01|Chapter04|Section01")
-	void Print();
+	virtual void Init() override;
 }; 

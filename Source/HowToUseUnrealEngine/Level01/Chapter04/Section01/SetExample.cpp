@@ -2,7 +2,7 @@
 #include "Common.h"
 
 
-void USetExample::Print()
+void USetExample::Init()
 {
 	TSet<int32> Int32Set;
 

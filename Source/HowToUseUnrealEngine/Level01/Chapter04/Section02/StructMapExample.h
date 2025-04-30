@@ -1,7 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Engine/GameInstance.h"
 #include "StructMapExample.generated.h"
 
 
@@ -29,14 +29,13 @@ struct FStudentData
 	int32 Order;
 }; 
 
-UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API UStructMapExample : public USceneComponent
+UCLASS( ClassGroup=(HowToUseUnrealEngine) )
+class HOWTOUSEUNREALENGINE_API UStructMapExample : public UGameInstance
 {
 	GENERATED_BODY()
 
 public:	
-	UFUNCTION(BlueprintCallable, Category = "Level01|Chapter04|Section02")
-	void Print();
+	virtual void Init() override;
 
 private:
 	TArray<FStudentData> StudentsData;

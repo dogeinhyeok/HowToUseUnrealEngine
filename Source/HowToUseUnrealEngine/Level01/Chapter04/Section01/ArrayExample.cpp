@@ -2,7 +2,7 @@
 #include "Common.h"
 
 
-void UArrayExample::Print()
+void UArrayExample::Init()
 {
 	const int32 ArrayNum = 10;
 	TArray<int32> Int32Array;
