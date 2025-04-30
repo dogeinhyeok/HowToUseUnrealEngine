@@ -2,11 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
-#include "SerializationExample.generated.h"
+#include "SerializationJsonExample.generated.h"
 
 
 UCLASS( ClassGroup=(HowToUseUnrealEngine) )
-class HOWTOUSEUNREALENGINE_API USerializationExample : public UGameInstance
+class HOWTOUSEUNREALENGINE_API USerializationJsonExample : public UGameInstance
 {
 	GENERATED_BODY()
 
