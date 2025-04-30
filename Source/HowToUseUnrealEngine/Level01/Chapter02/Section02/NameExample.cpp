@@ -1,7 +1,7 @@
-#include "Name.h"
+#include "NameExample.h"
 
 
-void UName::Print()
+void UNameExample::Init()
 {
 	FName key1(TEXT("PELVIS"));
 	FName key2(TEXT("pelvis"));

@@ -1,12 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "Person.generated.h"
 
 
-UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API UPerson : public USceneComponent
+UCLASS( ClassGroup=(HowToUseUnrealEngine) )
+class HOWTOUSEUNREALENGINE_API UPerson : public UObject
 {
 	GENERATED_BODY()
 

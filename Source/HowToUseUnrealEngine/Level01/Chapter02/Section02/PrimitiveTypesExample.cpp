@@ -1,7 +1,7 @@
-#include "PrimitiveTypes.h"
+#include "PrimitiveTypesExample.h"
 
 
-void UPrimitiveTypes::Print()
+void UPrimitiveTypesExample::Init()
 {
 	// 기본 숫자 타입 선언
 	int32 IntValue = 32;

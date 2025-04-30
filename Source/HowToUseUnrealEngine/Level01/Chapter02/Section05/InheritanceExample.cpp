@@ -1,18 +1,10 @@
-#include "School.h"
+#include "InheritanceExample.h"
 #include "Student.h"
 #include "Teacher.h"
 
-USchool::USchool()
-{
-    // 생성자에서 변수를 초기화하면 해당 값이 CDO(Class Default Object)에 저장됩니다.
-    SchoolName = TEXT("Unreal School");
-}
 
-void USchool::Print()
+void UInheritanceExample::Init()
 {
-    UE_LOG(LogTemp, Log, TEXT("SchoolName: %s"), *SchoolName);
-    UE_LOG(LogTemp, Log, TEXT("---"));
-
     UStudent *Student = NewObject<UStudent>(this);
     UTeacher *Teacher = NewObject<UTeacher>(this);
 

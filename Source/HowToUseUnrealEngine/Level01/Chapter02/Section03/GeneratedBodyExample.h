@@ -1,12 +1,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "GeneratedBody.generated.h"  // 이 헤더 파일이 가장 하단에 위치해야 합니다.
+#include "Engine/GameInstance.h"
+#include "GeneratedBodyExample.generated.h"  // 이 헤더 파일이 가장 하단에 위치해야 합니다.
 
 
-UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API UGeneratedBody : public USceneComponent
+UCLASS( ClassGroup=(HowToUseUnrealEngine) )
+class HOWTOUSEUNREALENGINE_API UGeneratedBodyExample : public UGameInstance
 {
 	GENERATED_BODY()
 
@@ -20,6 +20,5 @@ class HOWTOUSEUNREALENGINE_API UGeneratedBody : public USceneComponent
 	// 2. 이 파일은 언리얼 엔진 기능을 사용하기 위한 코드로 Intermediate 폴더에 저장합니다.
 
 public:	
-	UFUNCTION(BlueprintCallable, Category = "Level01|Chapter02|Section03")
-	void Print();
+	virtual void Init() override;
 };

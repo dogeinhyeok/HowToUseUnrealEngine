@@ -1,7 +1,7 @@
-#include "String.h"
+#include "StringExample.h"
 
 
-void UString::Print()
+void UStringExample::Init()
 {
 	// 언리얼 문자열 기본 사용법
 	TCHAR LogCharArray[] = TEXT("Hello Unreal");
