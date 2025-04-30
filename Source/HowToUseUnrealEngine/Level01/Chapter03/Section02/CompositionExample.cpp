@@ -1,8 +1,8 @@
-# include "City.h"
+# include "CompositionExample.h"
 # include "Citizen.h"
 # include "CitizenCard.h"
 
-void UCity::Print()
+void UCompositionExample::Init()
 {
     // 시민 배열 선언
     TArray<UCitizen*> Citizens;
@@ -12,7 +12,6 @@ void UCity::Print()
     {
         // 새로운 시민 생성
         UCitizen* NewCitizen = NewObject<UCitizen>(this);
-        NewCitizen->RegisterComponent();
         
         // 시민증에 직업 할당
         UCitizenCard* Card = NewCitizen->GetCitizenCard();

@@ -4,8 +4,8 @@
 #include "Components/ActorComponent.h"
 #include "Citizen.generated.h"
 
-UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API UCitizen : public USceneComponent
+UCLASS( ClassGroup=(HowToUseUnrealEngine) )
+class HOWTOUSEUNREALENGINE_API UCitizen : public UObject
 {
     GENERATED_BODY()
 

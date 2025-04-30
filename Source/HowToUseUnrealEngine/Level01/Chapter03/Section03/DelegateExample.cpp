@@ -1,8 +1,9 @@
-#include "Platform.h"
+#include "DelegateExample.h"
 #include "Creator.h"
 #include "Subscriber.h"
 
-void UPlatform::Print()
+
+void UDelegateExample::Init()
 {
     // 크리에이터와 구독자 생성
     TObjectPtr<UCreator> Creator = NewObject<UCreator>(this);

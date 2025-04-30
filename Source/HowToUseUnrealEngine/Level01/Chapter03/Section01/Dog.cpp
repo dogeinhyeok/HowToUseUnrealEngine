@@ -1,5 +1,6 @@
 # include "Dog.h"
 
+
 void UDog::Walk_Implementation()
 {
     UE_LOG(LogTemp, Log, TEXT("개가 걸었습니다."));

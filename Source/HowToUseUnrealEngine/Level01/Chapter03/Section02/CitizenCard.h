@@ -13,8 +13,8 @@ enum class EJob : uint8
     Doctor UMETA(DisplayName = "Doctor")
 };
 
-UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API UCitizenCard : public USceneComponent
+UCLASS( ClassGroup=(HowToUseUnrealEngine) )
+class HOWTOUSEUNREALENGINE_API UCitizenCard : public UObject
 {
     GENERATED_BODY()
 

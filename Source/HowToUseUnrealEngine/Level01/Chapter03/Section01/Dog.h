@@ -1,13 +1,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "AnimalInterface.h"
+#include "Animal.h"
 #include "Dog.generated.h"
 
 
-UCLASS( ClassGroup=(HowToUseUnrealEngine), meta=(BlueprintSpawnableComponent) )
-class HOWTOUSEUNREALENGINE_API UDog : public USceneComponent, public IAnimalInterface
+UCLASS( ClassGroup=(HowToUseUnrealEngine) )
+class HOWTOUSEUNREALENGINE_API UDog : public UObject, public IAnimal
 {
     GENERATED_BODY()
 
