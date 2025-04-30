@@ -1,7 +1,7 @@
-#include "HelloUnreal.h"
+#include "PrintExample.h"
 
 
-void UHelloUnreal::Print()
+void UPrintExample::Init()
 {
 	const FString MESSAGE_TEXT = TEXT("Hello Unreal");
 
