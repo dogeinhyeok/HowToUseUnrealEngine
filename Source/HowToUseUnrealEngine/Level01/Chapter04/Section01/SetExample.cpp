@@ -1,10 +1,6 @@
 #include "SetExample.h"
+#include "Common.h"
 
-
-static FString IntToString(const int32& Value)
-{
-	return FString::FromInt(Value);
-}
 
 void USetExample::Print()
 {
