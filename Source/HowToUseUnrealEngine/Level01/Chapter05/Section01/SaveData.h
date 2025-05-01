@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "SaveData.generated.h"
 
+
 USTRUCT()
 struct HOWTOUSEUNREALENGINE_API FSaveData
 {

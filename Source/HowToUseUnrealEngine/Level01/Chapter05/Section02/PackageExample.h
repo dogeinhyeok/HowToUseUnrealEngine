@@ -12,4 +12,10 @@ class HOWTOUSEUNREALENGINE_API UPackageExample : public UGameInstance
 
 public:	
 	virtual void Init() override;
+	void SavePackageObject() const;
+	void LoadPackageObject() const;
+	
+private:
+	static const FString PackageName;
+	static const FString AssetName;
 }; 
