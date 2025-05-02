@@ -8,6 +8,12 @@ public class HowToUseUnrealEngine : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
+		PublicIncludePaths.AddRange(
+			new string[] {
+				ModuleDirectory + "/Level02/ArenaBattle"
+			}
+		);
+	
 		PublicDependencyModuleNames.AddRange(new string[] { 
 			"Core", 
 			"CoreUObject", 
