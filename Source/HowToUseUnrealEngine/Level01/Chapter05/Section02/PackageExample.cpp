@@ -7,10 +7,48 @@
 const FString UPackageExample::PackageName = TEXT("/Game/PackageExample");
 const FString UPackageExample::AssetName = TEXT("PackageObject");
 
+UPackageExample::UPackageExample()
+{
+    // 생성자에서 에셋을 로딩할 때는 ConstructorHelpers를 사용해야 한다.
+    const FString TopSoftObjectPath = FString::Printf(TEXT("%s.%s"), *PackageName, *AssetName);
+    static ConstructorHelpers::FObjectFinder<UPackageObject> PackageObjectClass(*TopSoftObjectPath);
+    if (PackageObjectClass.Succeeded())
+    {
+        UE_LOG(LogTemp, Log, TEXT("생성자에서 패키지 로드 성공: %s, %d"), *PackageObjectClass.Object->GetName(), PackageObjectClass.Object->GetOrder());
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("생성자에서 패키지 로드 실패: %s"), *TopSoftObjectPath);
+    }
+}
+
 void UPackageExample::Init()
 {
     SavePackageObject();
     LoadPackageObject();
+    LoadPackageObjectByPath();
+
+    const FString TopSoftObjectPath = FString::Printf(TEXT("%s.%s"), *PackageName, *AssetName);
+    StreamableHandle = StreamableManager.RequestAsyncLoad(TopSoftObjectPath, 
+        [&]()
+        {
+            if(StreamableHandle.IsValid() && StreamableHandle->HasLoadCompleted())
+            {
+                UPackageObject* PackageObject = Cast<UPackageObject>(StreamableHandle->GetLoadedAsset());
+                if(PackageObject)
+                {
+                    UE_LOG(LogTemp, Log, TEXT("스트림 로드 성공: %s, %d"), *PackageObject->GetName(), PackageObject->GetOrder());
+
+                    StreamableHandle->ReleaseHandle();
+                    StreamableHandle.Reset();
+                }
+                else
+                {
+                    UE_LOG(LogTemp, Error, TEXT("스트림 로드 실패: %s"), *TopSoftObjectPath);
+                }
+            }
+        }
+    );
 }
 
 void UPackageExample::SavePackageObject() const
@@ -74,5 +112,20 @@ void UPackageExample::LoadPackageObject() const
     else
     {
         UE_LOG(LogTemp, Error, TEXT("패키지 로드 실패: %s"), *PackageName); 
+    }
+}
+
+void UPackageExample::LoadPackageObjectByPath() const
+{
+    const FString TopSoftObjectPath = FString::Printf(TEXT("%s.%s"), *PackageName, *AssetName);
+
+    UPackageObject* PackageObject = LoadObject<UPackageObject>(nullptr, *TopSoftObjectPath);
+    if (PackageObject)
+    {
+        UE_LOG(LogTemp, Log, TEXT("패키지 경로로 로드 성공: %s, %d"), *PackageObject->GetName(), PackageObject->GetOrder());
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("패키지 경로로 로드 실패: %s"), *TopSoftObjectPath);
     }
 }
