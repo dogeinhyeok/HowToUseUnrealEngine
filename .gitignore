@@ -21,6 +21,7 @@ Plugins/*/DerivedDataCache/
 
 # 패키징 결과물
 Builds/
+Packages/
 
 # 에셋 컴파일 캐시
 .vscode/
